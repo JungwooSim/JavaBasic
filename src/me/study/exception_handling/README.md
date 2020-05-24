@@ -5,7 +5,8 @@
         - Error - 발생하면 복구할 수 없는 심각한 오류
             - Ex. OutOfMemoryError, StackOverflowError
         - Exception - 프로그램 코드에 의해 수습될 수 있는 미약한 오류
-            - 계층 구조
+            - 계층 구조<br>
+            
                 <img src="/src/me/study/exception_handling/img/08_1.png" width="500px;"><br>
                 <img src="/src/me/study/exception_handling/img/08_2.png" width="500px;"><br>
                 - Exception Class - **사용자의 실수**와 같은 **외적인 요인**에 의해 발생하는 예외
