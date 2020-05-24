@@ -6,8 +6,8 @@
             - Ex. OutOfMemoryError, StackOverflowError
         - Exception - 프로그램 코드에 의해 수습될 수 있는 미약한 오류
             - 계층 구조
-                <img src="./img/08_1.png" width="500px;"><br>
-                <img src="./img/08_2.png" width="500px;"><br>
+                <img src="/src/me/study/exception_handling/img/08_1.png" width="500px;"><br>
+                <img src="/src/me/study/exception_handling/img/08_2.png" width="500px;"><br>
                 - Exception Class - **사용자의 실수**와 같은 **외적인 요인**에 의해 발생하는 예외
                 - RuntimeException Class - **개발자의 실수**로 발생하는 예외
                     - 컴파일러가 예외 처리를 확인하지 않으므로 예외가 필요하다면 예외 발생 경우를 모두 고려하여 모든 곳에 예외 처리가 필요하다.
