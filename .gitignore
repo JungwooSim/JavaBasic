@@ -7,4 +7,6 @@
 ## iml ##
 *.iml
 
+out.*
+
 .gitignore
