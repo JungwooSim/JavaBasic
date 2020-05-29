@@ -1,4 +1,4 @@
-## ava.lang패키지와 유용한 클래스
+## Java.lang 패키지와 유용한 클래스
 
 ### Object Class
 
