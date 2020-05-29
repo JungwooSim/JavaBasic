@@ -29,3 +29,65 @@
 **문자열 비교**
 
 - String Class의 생성자를 이용한 경우에는 new연산자에 의해서 메모리 할당이 이루어지기 때문에 항상 새로운 String  인스턴스가 생성된다. 그러나 문자열 리터럴은 이미 존재하는 것을 재사용하는 것이다.
+
+### StringBuffer 클래스와 StringBuilder 클래스
+
+- String는 인스턴스 생성할 때 지정된 문자열을 변경할 수 없다. 하지만 **StringBuffer 클래스는 내부적으로 편집을 위한 buffer을 가지고 있어서 변경이 가능하고, 인스턴스 생성할 때 크기를 지정할 수 있다.**
+    - 크기를 지정할 때는 편집을 생각하여 충분히 잡는 것이 좋다. 만약 편집 중인 문자열이 지정한 크기를 넘게 되면 buffer의 길이를 늘려주는 작업이 추가로 수행된다.(Copy On  Write 방식이며 작업 효율 감소)
+- thread safe 가 된다.(멀티스레드 환경에서 동기화)
+
+**StringBuilder**
+
+- StringBuffer 에서 thread safe가 빠진 것.
+    - thread safe가 빠짐으로 인해 StrinfBuffer보다 성능이 우수하다.
+
+**Math Class**
+
+- 기본적인 수학계산에 유용한 메소드로 구성
+
+**StringMath Class**
+
+- Math Class는 최대한의 성능을 얻기 위해 JVM에 설치된 OS의 메소드를 호출해서 사용한다. (OS에 의존적인 계산)
+- OS마다 다를 수 있는 문제점을 개선하기위해 성능을 다소 포기하는 대신에 만들어진 클래스
+
+**Wrapper Class**
+
+- 기본형(primitive type) 변수를 객체로 다뤄야 할 때 기본형 값들을 객체로 변환할 때 사용되는 것
+    - 기본형(primitive type) 변수를 객체로 다뤄야 할 때는 매개변수로 객체를 요구하거나, 기본형 값이 아닌 객체로 저장해야 할 때, 객체 간의 비교가 필요할 때, 등..
+
+        <div>
+            <img src="/src/me/study/java_lang/img/wrapper.jpeg" width="500px;">
+        </div>
+
+**Number Class**
+
+- 추상클래스로 내부적으로 숫자를 멤버변수로 갖는 wrapper class들의 조상이다.
+
+<img src="/src/me/study/java_lang/img/number.jpeg" width="500px;">
+
+**문자열을 숫자로 변환하기**
+
+<img src="/src/me/study/java_lang/img/number_02.jpeg" width="500px;">
+
+JDK1.5부터는 autuboxing 기능으로 인해 반환값이 기본형일 때와 래퍼클래스일 때의 차이가 없어졌다. 그래서 그냥 구별 없이 valueOf()를 쓰는 것도 괜찮은 방법이다.(단 성능은 valufOf()가 조금 더 느리다.)
+
+**AutoBoxing & UnBoxing**
+
+- AutoBoxsing : 기본형 값 → 래퍼 클래스 로 자동 변환
+- UnBoxing : 래퍼 클래스 → 기본형 값 으로 자동 변환
+
+### 유용한 클래스
+
+**java.utill.Objects Class**
+
+- Object class의 보조 클래스, Math Class 처럼 모든 메소드가 'static' 이다
+- 객체의 비교, null check에 유용하다
+- compare() : 두 비교대상이 같으면 0, 크면 양수, 적으면 음수 를 리턴
+
+**java.util.regex Package**
+
+<img src="/src/me/study/java_lang/img/regex.jpeg" width="700px;">
+
+**java.util.Scanner Class**
+
+- 화면, 파일, 문자열과 같은 입력소스로부터 문자데이터를 읽어오는데 도움을 주는 목적으로 JDK1.5부터 추가
