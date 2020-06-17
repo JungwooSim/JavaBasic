@@ -64,10 +64,10 @@
 **ArrayList와 LinkedList 비교**
 <table>
     <tr>
-        <td>컬렉션</td>
-        <td>읽기(접근시간)</td>
-        <td>추가 / 삭제</td>
-        <td>비고</td>
+        <th>컬렉션</th>
+        <th>읽기(접근시간)</th>
+        <th>추가 / 삭제</th>
+        <th>비고</th>
     </tr>
     <tr>
         <td>ArrayList</td>
