@@ -62,11 +62,26 @@
 - 또, Doubly Circular Linked List(이중 원형 연결리스트) 자료구조가 있다. 이는 Doubly Linked 의 첫번째 요소와 마지막 요소를 서로 연결시킨 것으로 Doubly Linked의 단점을 보완시킨 자료구조이다.
 
 **ArrayList와 LinkedList 비교**
-
-| 컬렉션 | 읽기(접근시간) | 추가/삭제 | 비고 |
-|---|:---:|---:|
-| ArrayList | 빠르다 | 느리다 | 순차적인 추가삭제는 더 빠르다.<br>비효율적인 메모리 사용 |
-| LinkedList | 느리다 | 빠르다 | 데이터가 많을수록 접근성이 떨어진다. |
+<table>
+    <tr>
+        <td>컬렉션</td>
+        <td>읽기(접근시간)</td>
+        <td>추가 / 삭제</td>
+        <td>비고</td>
+    </tr>
+    <tr>
+        <td>ArrayList</td>
+        <td>빠르다</td>
+        <td>느리다</td>
+        <td>순차적인 추가삭제는 더 빠르다.<br>비효율적인 메모리 사용</td>
+    </tr>
+    <tr>
+        <td>LinkedList</td>
+        <td>느리다</td>
+        <td>빠르다</td>
+        <td>데이터가 많을수록 접근성이 떨어진다.</td>
+    </tr>
+</table>
 
 - 다루고자 하는 데이터의 개수가 변하지 않는 경우라면, ArrayList가 최상의 선택이 될수 있다.
 - 하지만, 데이터 개수의 변경이 잦다면 LinkedList를 사용하는 것이 더 나은 선택이 될 것이다.
