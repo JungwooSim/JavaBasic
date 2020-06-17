@@ -60,3 +60,33 @@
 - 데이터를 삭제하거나 추가할 때 데이터를 복사하는 과정이 없으므로 처리속도가 빠르다.
 - LinkedList는 단방향이므로 다음 요소에 접근은 쉽지만 이전요소에 대한 접근은 어렵다. 이를 보완하기 위해 양방향으로 접근 가능한 Doubly Linked List 자료구조가 있으며 Linked List보다 더 많이 이용된다.
 - 또, Doubly Circular Linked List(이중 원형 연결리스트) 자료구조가 있다. 이는 Doubly Linked 의 첫번째 요소와 마지막 요소를 서로 연결시킨 것으로 Doubly Linked의 단점을 보완시킨 자료구조이다.
+
+**ArrayList와 LinkedList 비교**
+
+| 컬렉션 | 읽기(접근시간) | 추가/삭제 | 비고 |
+|---|:---:|---:|
+| ArrayList | 빠르다 | 느리다 | 순차적인 추가삭제는 더 빠르다.<br>비효율적인 메모리 사용 |
+| LinkedList | 느리다 | 빠르다 | 데이터가 많을수록 접근성이 떨어진다. |
+
+- 다루고자 하는 데이터의 개수가 변하지 않는 경우라면, ArrayList가 최상의 선택이 될수 있다.
+- 하지만, 데이터 개수의 변경이 잦다면 LinkedList를 사용하는 것이 더 나은 선택이 될 것이다.
+- 두 클래스의 장점을 이용하여 조합해서 사용하는 방법도 생각해 볼 수 있다. 컬렉션 프레임워크에서는 대부분 변환이 가능한 생성자를 제공하고 있다.
+
+**Stack과 Queue**
+
+- Stack : List In First Out
+    - ArrayList 가 적합
+- Queue : First In First Out
+    - LinkedList 가 적합하다. (Array는 매번 빈공간을 채우기 위해 데이터 복사가 발생하므로 비효율적)
+
+**Priority Queue**
+
+- Queue 인터페이스의 구현체 중 하나로, 저장된 순서와 관계없이 우선순위(priority)가 높은 것부터 꺼내게되는 특징이 있다.
+- 저장공간을 배열을 사용하고, Heap이라는 자료구조의 형태로 저장한다.
+
+**Deque(Double-Ended Queue)**
+
+- Queue의 변형으로, 한 쪽 끝으로만 추가/삭제할 수 있는 Queue와 달리 양쪽 끝에 추가/삭제가 가능
+- Deque의 조상은 Queue이고, 구현체는 ArrayDeque와 LinkedList 등이 있다.
+
+    <img src="/src/me/study/collection_framework/img/6.jpeg" width="500px;">
