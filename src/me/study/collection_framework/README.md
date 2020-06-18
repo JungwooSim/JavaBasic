@@ -105,3 +105,19 @@
 - Deque의 조상은 Queue이고, 구현체는 ArrayDeque와 LinkedList 등이 있다.
 
     <img src="/src/me/study/collection_framework/img/6.jpeg" width="500px;">
+    
+**Iterator**
+
+- 컬렉션에 저장된 각 요소에 접근하는 기능을 가진 Iterator 인터페이스를 정의하고, Collection 인터페이스에는 'Iterator'를 반환하는 iterator()를 정의하고 있다.
+- iterator()는 Collection 인터페이스에 정의된 메서드이므로 List와 Set에도 포함되어 있다.
+- 컬렉션 클래스에 대해 iterator()를 호출하여 Iterator을 얻은 후 반복문, 주로 while문을 사용해서 컬렉션의 요소를 읽어 올 수 있다.
+- Map인터페이스를 구현한 컬렉션 클래스는 키(key)와 값(value)을 쌍(pair)으로 저장하고 있기 때문에 Iterator()를 직접 호출할 수 없고, 그 대신 keySet()이나 entrySet()과 같은 메서드를 통해서 키와 값을 각각 따로 Set의 형태로 얻어 온 후에 다시 iterator()를 호출해야 Iterator을 얻을 수 있다.
+
+**ListIterator와 Enumeration**
+
+- Enumeration은 컬렉션 프레임워크가 만들어지기 이전에 사용하던 것으로 Itertor의 구버전이라고 생각하면된다. 현재는 이전 버전으로 작성된 호환성 문제로 남겨 두고 있을 뿐이므로 Itertor을 사용하는 것을 권장한다.
+- ListIterator은 Iterator을 상속받아서 추가한 것으로, 컬렉션 요소에 접근할 때 양방향으로 가능하다.(Iterator는 단방향으로 가능), 다만 ArrayList나 LinkedList와 같이 List 인터페이스를 구현한 컬렉션에서만 사용가능하다.
+
+**Arrays**
+
+- 배열을 다루는데 유용한 메서드가 정의되어 있다.
