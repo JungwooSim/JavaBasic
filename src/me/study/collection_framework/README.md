@@ -121,3 +121,20 @@
 **Arrays**
 
 - 배열을 다루는데 유용한 메서드가 정의되어 있다.
+
+**배열을 List로 변환 - asList(Object... a)**
+
+- 주의할점은 asList()가 반환한 List의 크기를 변경할 수 없다는 점. 즉, 추가 및 삭제가 불가능하다. (저장된 내용은 변경 가능)
+
+**Comparator, Comparable**
+
+- 인터페이스로 컬렉션을 정렬하는데 필요한 메서드를 정의하고 있으며, Comparable을 구현하고 있는 클래스들은 같은 타입의 인스턴스끼리 서로 비교할 수 있는 클래스들, 주로 Integer와 같은 wrapper클래스와 String, Date, File과 같은 것들이다. 기본적으로 오름차순이 되도록 구현되어 있다.
+
+**HashSet**
+
+- Set인터페이스를 구현한 가장 대표적인 컬렉션이며, Set인터페이스의 특징대로 HashSet은 중복된 요소를 저장하지 않음.
+- 저장순서를 유지하지 않으므로 저장순서를 유지하고자 한다면 LinkedHashSet을 사용하면 된다.
+- HashSet은 내부적으로 HashMap을 이용해서 만들어졌다.
+- HashSet의 add 메서드는 새로운 요소를 추가하기 전에 기존에 저장된 요소와 같은 것인지 판별하기 위해 추가하려는 요소(객체가 될 수 있음)의 equlas()와 hashCode()를 호출하기 때문에 목적에 맞게 오버라이딩 해야 한다.(<a href="https://github.com/JungwooSim/JavaBasic/tree/master/src/me/study/collection_framework/HashSetEx4.java" target="_blank">링크</a>)
+
+
