@@ -89,7 +89,7 @@
 
 **Stack과 Queue**
 
-- Stack : List In First Out
+- Stack : Last In First Out
     - ArrayList 가 적합
 - Queue : First In First Out
     - LinkedList 가 적합하다. (Array는 매번 빈공간을 채우기 위해 데이터 복사가 발생하므로 비효율적)
@@ -137,4 +137,29 @@
 - HashSet은 내부적으로 HashMap을 이용해서 만들어졌다.
 - HashSet의 add 메서드는 새로운 요소를 추가하기 전에 기존에 저장된 요소와 같은 것인지 판별하기 위해 추가하려는 요소(객체가 될 수 있음)의 equlas()와 hashCode()를 호출하기 때문에 목적에 맞게 오버라이딩 해야 한다.(<a href="https://github.com/JungwooSim/JavaBasic/tree/master/src/me/study/collection_framework/HashSetEx4.java" target="_blank">링크</a>)
 
+**TreeSet**
 
+- binary search tree 자료구조의 형태로 데이터를 저장하는 컬렉션 클래스이다.
+- 정렬, 검색, 범위검색(range search)에 높은 성능을 보이는 자료구조이며 이진 검색 트리의 성능을 향상시킨 '레드 - 블랙 트리(Rad - Black tree)'로 구현되어 있다.
+    - 정렬된 상태를 유지하며 Node를 추가하기 때문에 검색이 매우 빠르다.
+- Set 인터페이스를 구현했으므로 중복된 데이터의 저장을 허용하지 않으며 정렬된 위치에 저장하므로 저장된 순서를 유지하지도 않는다.
+- Linked List처럼 여러 개의 Node가 서로 연결된 구조로, 각 노드에 최대 2개의 노드를 연결할 수 있으며 'root'라고 불리는 하나의 노드에서부터 시작해서 계속 확장해 나갈 수 있다.
+- 데이터를 순차적으로 저장하는 것이 아니라 저장위치를 찾아서 저장해야하고, 삭제하는 경우 트리의 일부를 재구성해야 하므로 Linked List보다 데이터의 추가/삭제 시간이 더 걸린다. 대신 배열이나 링크드 리스트에 비해 검색과 정렬기능이 더 뛰어난다.
+
+<img src="/src/me/study/collection_framework/img/7.jpeg" width="500px;">
+
+**HashMap과 Hashtable**
+
+- Hashtable과 HashMap의 관계는 Vector와 ArrayList의 관계와 같아서 Hashtable보다는 새로운 버전인 HashMap을 사용할 것을 권한다.
+- HashMap는 Map을 구현한 것이므로 Key와 Value을 묶어서 하나의 데이터(entry)로 저장한다는 특징을 갖는다. 그리고 hashing을 사용하기 때문에 많은 양의 데이터를 검색하는데 있어서 뛰어난 성능을 보인다.
+- HashMap은 키와 값을 Object 타입으로 저장한다. 즉, (Object, Object)의 형태로 저장하기 때문에 어떠한 객체도 저장할 수 없지만 주로 String을 대문자 또는 소문자로 통일해서 사용하곤 한다.
+
+**해싱과 해시함수**
+
+- 해싱이란 해시함수(hash function)을 이용해서 데이터를 hash table에 저장하고 검색하는 기법을 말한다.
+- 해시함수는 데이터가 저장된 위치를 알려주기 때문에 다량의 데이터 중에서도 원하는 데이터를 빠르게 찾을 수 있다.
+- 해싱에서 사용하는 자료구조는 다음과 같이 배열과 링크드 리스트의 조합으로 되어 있다.
+
+<img src="/src/me/study/collection_framework/img/8.jpeg" width="500px;">
+
+- 저장할 데이터의 키를 해시함수에 넣으면 배열의 한 요소를 얻게 되고, 다시 그 곳에 연결되어 있는 링크드 리스트에 저장하게 된다.
